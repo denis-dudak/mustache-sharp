@@ -6,7 +6,12 @@ namespace Mustache
     public sealed class HtmlFormatCompiler
     {
         private readonly FormatCompiler compiler = new FormatCompiler();
-
+        public bool RemoveNewLines
+        {
+            get {return compiler.RemoveNewLines;}
+            set {compiler.RemoveNewLines = value;}
+        }
+        
         public HtmlFormatCompiler()
         {
             compiler.AreExtensionTagsAllowed = true;
